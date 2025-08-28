@@ -1,5 +1,6 @@
 package uk.gov.dwp.uc.pairtest.rule.validation;
 
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import uk.gov.dwp.uc.pairtest.domain.TicketTypeRequest;
@@ -9,8 +10,12 @@ import static org.junit.jupiter.api.Assertions.assertDoesNotThrow;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
 public class TicketMaximumQuantityValidationTest {
-    TicketMaximumQuantityValidation ticketMaximumQuantityValidation = new TicketMaximumQuantityValidation();
+    TicketMaximumQuantityValidation ticketMaximumQuantityValidation;
 
+    @BeforeEach
+    void setUp() {
+        ticketMaximumQuantityValidation = new TicketMaximumQuantityValidation();
+    }
 
     @Test
     @DisplayName("Maximum of 25 tickets can be purchased at a time")

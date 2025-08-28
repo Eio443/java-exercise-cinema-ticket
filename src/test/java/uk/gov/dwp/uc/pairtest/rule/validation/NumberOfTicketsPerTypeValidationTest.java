@@ -1,5 +1,6 @@
 package uk.gov.dwp.uc.pairtest.rule.validation;
 
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import uk.gov.dwp.uc.pairtest.domain.TicketTypeRequest;
@@ -9,7 +10,12 @@ import static org.junit.jupiter.api.Assertions.assertDoesNotThrow;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
 public class NumberOfTicketsPerTypeValidationTest {
-    NumberOfTicketsPerTypeValidation numberOfTicketsPerTypeValidation = new NumberOfTicketsPerTypeValidation();
+    NumberOfTicketsPerTypeValidation numberOfTicketsPerTypeValidation;
+
+    @BeforeEach
+    void setUp() {
+        numberOfTicketsPerTypeValidation = new NumberOfTicketsPerTypeValidation();
+    }
 
     @Test
     @DisplayName("negative adult ticket quantity should be rejected")

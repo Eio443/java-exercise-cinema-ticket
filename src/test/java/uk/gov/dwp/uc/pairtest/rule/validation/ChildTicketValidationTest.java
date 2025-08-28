@@ -1,5 +1,6 @@
 package uk.gov.dwp.uc.pairtest.rule.validation;
 
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import uk.gov.dwp.uc.pairtest.domain.TicketTypeRequest;
@@ -9,7 +10,12 @@ import static org.junit.jupiter.api.Assertions.assertDoesNotThrow;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
 public class ChildTicketValidationTest {
-    ChildTicketValidation childTicketValidation = new ChildTicketValidation();
+    ChildTicketValidation childTicketValidation;
+
+    @BeforeEach
+    void setUp() {
+        childTicketValidation = new ChildTicketValidation();
+    }
 
     @Test
     @DisplayName("child ticket without adult ticket should be rejected")

@@ -1,5 +1,6 @@
 package uk.gov.dwp.uc.pairtest.rule.validation;
 
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import uk.gov.dwp.uc.pairtest.domain.TicketTypeRequest;
 import uk.gov.dwp.uc.pairtest.exception.InvalidPurchaseException;
@@ -8,7 +9,12 @@ import static org.junit.jupiter.api.Assertions.assertDoesNotThrow;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
 public class AccountIdValidationTest {
-    AccountIdValidation accountIdValidation = new AccountIdValidation();
+    AccountIdValidation accountIdValidation;
+
+    @BeforeEach
+    void setUp() {
+        accountIdValidation = new AccountIdValidation();
+    }
 
      TicketTypeRequest[] ticketTypeRequests = new TicketTypeRequest[] {
             new TicketTypeRequest(TicketTypeRequest.Type.ADULT, 2)

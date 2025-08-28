@@ -20,10 +20,10 @@ public class TicketServiceImpl implements TicketService {
     private final SeatToAllocateCalculator seatToAllocateCalculator;
 
     private TicketServiceImpl(BusinessRuleService businessRuleService,
-                             TicketPaymentService ticketPaymentService,
-                             SeatReservationService seatReservationService,
-                             TicketTotalAmountCalculator ticketTotalAmountCalculator,
-                             SeatToAllocateCalculator seatToAllocateCalculator) {
+                              TicketPaymentService ticketPaymentService,
+                              SeatReservationService seatReservationService,
+                              TicketTotalAmountCalculator ticketTotalAmountCalculator,
+                              SeatToAllocateCalculator seatToAllocateCalculator) {
         this.businessRuleService = businessRuleService;
         this.ticketPaymentService = ticketPaymentService;
         this.seatReservationService = seatReservationService;

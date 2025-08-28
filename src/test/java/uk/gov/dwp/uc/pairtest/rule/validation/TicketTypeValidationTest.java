@@ -1,5 +1,6 @@
 package uk.gov.dwp.uc.pairtest.rule.validation;
 
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import uk.gov.dwp.uc.pairtest.domain.TicketTypeRequest;
@@ -7,7 +8,12 @@ import uk.gov.dwp.uc.pairtest.domain.TicketTypeRequest;
 import static org.junit.jupiter.api.Assertions.assertDoesNotThrow;
 
 public class TicketTypeValidationTest {
-    TicketTypeValidation ticketTypeValidation = new TicketTypeValidation();
+    TicketTypeValidation ticketTypeValidation;
+
+    @BeforeEach
+    void setUp() {
+        ticketTypeValidation = new TicketTypeValidation();
+    }
 
     @Test
     @DisplayName("ADULT is valid type")

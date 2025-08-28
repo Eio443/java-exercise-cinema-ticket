@@ -1,12 +1,18 @@
 package uk.gov.dwp.uc.pairtest.utils.calculator;
 
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import uk.gov.dwp.uc.pairtest.domain.TicketTypeRequest;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class TicketTotalAmountCalculatorTest {
-    TicketTotalAmountCalculator ticketTotalAmountCalculator = new TicketTotalAmountCalculatorImpl();
+    TicketTotalAmountCalculator ticketTotalAmountCalculator;
+
+    @BeforeEach
+    void setUp() {
+        ticketTotalAmountCalculator = new TicketTotalAmountCalculatorImpl();
+    }
 
     @Test
     void totalAmountToPayWhenAllTicketTypesPresent() {

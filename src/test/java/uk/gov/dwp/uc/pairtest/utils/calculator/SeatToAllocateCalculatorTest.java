@@ -1,11 +1,18 @@
 package uk.gov.dwp.uc.pairtest.utils.calculator;
 
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import uk.gov.dwp.uc.pairtest.domain.TicketTypeRequest;
+
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class SeatToAllocateCalculatorTest {
-    SeatToAllocateCalculator seatToAllocateCalculator = new SeatToAllocateCalculatorImpl();
+    SeatToAllocateCalculator seatToAllocateCalculator;
+
+    @BeforeEach
+    void setUp() {
+        seatToAllocateCalculator = new SeatToAllocateCalculatorImpl();
+    }
 
     @Test
     void totalSeatsWhenAllTicketTypesPresent() {
