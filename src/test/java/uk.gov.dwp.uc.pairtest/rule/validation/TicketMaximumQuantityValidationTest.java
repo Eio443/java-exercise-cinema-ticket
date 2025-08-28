@@ -19,7 +19,7 @@ public class TicketMaximumQuantityValidationTest {
                 new TicketTypeRequest(TicketTypeRequest.Type.ADULT, 20),
                 new TicketTypeRequest(TicketTypeRequest.Type.CHILD, 6)
         };
-        assertThrows(InvalidPurchaseException.class, () -> {ticketMaximumQuantityValidation.validate(2L, ticketTypeRequests);});
+        assertThrows(InvalidPurchaseException.class, () -> ticketMaximumQuantityValidation.validate(2L, ticketTypeRequests));
     }
 
     @Test

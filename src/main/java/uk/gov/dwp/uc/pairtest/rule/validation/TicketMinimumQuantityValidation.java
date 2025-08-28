@@ -2,7 +2,6 @@ package uk.gov.dwp.uc.pairtest.rule.validation;
 
 import uk.gov.dwp.uc.pairtest.domain.TicketTypeRequest;
 import uk.gov.dwp.uc.pairtest.exception.InvalidPurchaseException;
-import uk.gov.dwp.uc.pairtest.rule.validation.TicketTypeRequestValidator;
 
 import java.util.Arrays;
 

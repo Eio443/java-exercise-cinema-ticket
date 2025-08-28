@@ -2,8 +2,6 @@ package uk.gov.dwp.uc.pairtest.utils.calculator;
 
 import org.junit.jupiter.api.Test;
 import uk.gov.dwp.uc.pairtest.domain.TicketTypeRequest;
-import uk.gov.dwp.uc.pairtest.exception.InvalidPurchaseException;
-
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class SeatToAllocateCalculatorTest {
